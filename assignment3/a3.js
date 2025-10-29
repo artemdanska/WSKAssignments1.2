@@ -11,7 +11,8 @@ while (!done) {
   }
 }
 
-document.getElementById("output").innerHTML += "Numbers: " + numbers.join(", ") + "<br>";
+document.getElementById('output').innerHTML +=
+  'Numbers: ' + numbers.join(', ') + '<br>';
 
 const evenNumbers = [];
 for (let num of numbers) {
@@ -21,10 +22,10 @@ for (let num of numbers) {
 }
 
 if (evenNumbers.length === 0) {
-  document.getElementById("output").innerHTML += "No even numbers found.<br>";
+  document.getElementById('output').innerHTML += 'No even numbers found.<br>';
 } else {
-  document.getElementById("output").innerHTML += "Even Numbers: " + evenNumbers.join(", ") + "<br>";
+  document.getElementById('output').innerHTML +=
+    'Even Numbers: ' + evenNumbers.join(', ') + '<br>';
 }
-
 
 // const evenNumbers = numbers.filter(num => num % 2 === 0);
