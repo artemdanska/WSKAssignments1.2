@@ -12,7 +12,12 @@ const movieAmount = Number(prompt('How many movies do you want to rate?'));
 for (let i = 1; i < movieAmount + 1; i++) {
   let userTitle = prompt('What is the title of the movie ' + i + '?');
   let userRating = null;
-  while (userRating === null || isNaN(userRating)) {
+  while (
+    userRating === null ||
+    isNaN(userRating) ||
+    userRating < 0 ||
+    userRating > 10
+  ) {
     const input = prompt('What is your rating (10-0) for ' + userTitle + '?');
     userRating = Number(input);
     if (isNaN(userRating) || userRating < 0 || userRating > 10) {
